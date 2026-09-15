@@ -1,4 +1,4 @@
-# Cara jalanin dashboard ini di local (Antigravity / VS Code / terminal biasa)
+# Cara jalankan dashboard ini di local (Antigravity / VS Code / terminal biasa)
 
 ## 1. Struktur folder
 Taruh semua ini dalam SATU folder yang sama:
