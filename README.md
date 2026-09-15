@@ -4,19 +4,19 @@
 Taruh semua ini dalam SATU folder yang sama:
 
 ```
-folder-kamu/
+folder/
 ├── dashboard.py
-├── 11_aspect_best_multitask_model_2.pt   <-- file model kamu, RENAME persis ini
+├── 11_aspect_best_multitask_model_2.pt   <-- file model, RENAME persis ini
 ├── logo_rsmc.jpg   (atau logo_rsmc.png)  <-- opsional, kalau nggak ada tetap jalan (pakai emoji 🏥)
 └── requirements.txt
 ```
 
-Nama file model **harus** persis `11_aspect_best_multitask_model_2.pt` karena itu yang di-hardcode di `load_model()`. Kalau nama file model kamu beda, tinggal ganti baris ini di `dashboard.py`:
+Nama file model **harus** persis `11_aspect_best_multitask_model_2.pt` karena itu yang di-hardcode di `load_model()`. Kalau nama file model beda, bisa ganti baris ini di `dashboard.py`:
 
 ```python
 model.load_state_dict(torch.load('11_aspect_best_multitask_model_2.pt', map_location=device))
 ```
-ganti jadi path/nama file kamu.
+ganti jadi path/nama file.
 
 ## 2. Install dependencies
 Buka terminal di folder itu (di Antigravity bisa langsung integrated terminal), lalu:
@@ -41,7 +41,7 @@ Tidak perlu ngrok kalau cuma diakses di komputer sendiri — ngrok itu cuma dipa
 streamlit run dashboard.py
 ```
 
-Nanti otomatis kebuka browser ke `http://localhost:8501`. Kalau nggak kebuka otomatis, buka manual link itu.
+Nanti otomatis kebuka browser ke `http://localhost:8501`. Kalau tidak kebuka otomatis, buka manual link itu.
 
 ## 4. Kalau mau tetap pakai ngrok (misal mau share ke orang lain di luar jaringan)
 Baru optional install `pyngrok`, lalu jalankan `ngrok authtoken <token_kamu>` sekali di terminal, tapi ini nggak wajib buat akses local.
